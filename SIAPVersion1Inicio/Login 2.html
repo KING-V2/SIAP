@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login 2.css">
+    <title>Document2023</title>
+</head>
+<body>
+    <header>
+        <h2 class="logo">SIAP</h2>
+        <nav  class="navegador">
+        <a href="#">Inicio</a>
+        <a href="#">Categorias</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Ayuda</a>
+         <button class="btnLogin">Login</button>     
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="form-box register">
+            <h2>Registrar</h2>
+            <form action="#">
+                <div class="contenedor1">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></ion-icon></span>
+                    <input type="text" required>
+                    <label>Nombres y apellidos</label>
+                </div> 
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                   
+                </div>
+            </div>
+            <div class="contenedor2">
+                <div class="input-box" >
+                    <span class="icon"><ion-icon name="calendar"></ion-icon></span>
+                    <input class="BtnF" type="text" onfocus = "(this.type='date')" required >
+                    <label>Fecha de nacimiento</label>
+                   
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="tel" required>
+                    <label>Telefono</label>
+                   
+                </div>
+            </div>
+            <div class="contenedor3">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="location"></ion-icon></ion-icon></span>
+                    <input type="" required>
+                    <label>Direccion de residencia</label>
+                   
+                </div>
+
+                <div class="input-box" >
+                    <span class="icon"><ion-icon name="document"></ion-icon></span>
+                    <button type="button" class="Btnfile">Insertar Documento de identidad
+                    <input type="file" required>    
+                </button> 
+                </div>
+            </div>
+               
+                <button type="submit" class="btn">Registrar</button>
+                    <div class="password-forgot">
+                        <a href="#">¿Olvide mi contraseña?</a><a href="#" class="login-link">¿Ya tienes una cuenta?</a>
+                       </div>
+
+            </form>
+        </div>
+
+</body>
+</html>
