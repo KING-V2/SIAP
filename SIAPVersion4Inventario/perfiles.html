@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="perfiles.css">
+  <title>Panel de administración productos</title>
+</head>
+<body>
+  <div class ="contenedor">
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="img/logo.png" alt="Logo de prueba SIAP" ></a>
+          <h1>SIAP</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="perfiles.html">
+              <i class="userimg"><img src="img/user.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Perfiles</span>
+            </a>
+          </li>
+          <li>
+            <a href="productos.html">
+              <i class="productimg"><img src="img/product.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Productos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="helpimg"><img src="img/help.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Ayuda</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="reportimg"><img src="img/report.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Reportes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="logout">
+              <i class="logoutimg"><img src="img/log out.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Cerrar Sesion</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="main">
+     <div class="main-top">
+      <p>Maneja el inventario a tu gusto</p>
+    </div>
+    <div class="main-body">
+      <h1>Lista de usuarios</h1>
+    </div>
+    <div class="boton-usuario"><a href="#" class="crear-usuario">Nuevo Usuario</a></div>
+    <div class="listado-usuarios">
+        <table class="tabla-lista">
+            <tr>
+                <th>ID</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Email</th>
+                <th>Rol</th>
+                <th>Ultima sesion</th>
+                <th>Activo</th>
+                <th>Opciones</th>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>Harold Esteban</td>
+                <td>Gaona Rojas</td>
+                <td>rojasharold882@gmail.com</td>
+                <td>Administrador</td>
+                <td>20/06/2023</td>
+                <td><img src="img/vistobueno.svg" alt="icono de visto bueno" width="20px"></td>
+                <td><a href="#"><img src="img/iconoeditar.svg" alt="Logo de editar"></td></a>
+            </tr>
+            <tr class="lista2">
+              <td>02</td>
+              <td>Cristian Daniel</td>
+              <td>Arrieta Vargas</td>
+              <td>danielarrieta0813@gmail.com</td>
+              <td>Vendedor</td>
+              <td>5/05/2023</td>
+              <td><img src="img/iconoinactivo.svg" alt="icono de visto bueno" width="20px"></td>
+              <td><a href="#"><img src="img/iconoeditar.svg" alt="Logo de editar"></td></a>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>Laura Julieth</td>
+            <td>Suarez Lopez</td>
+            <td>suarezlaura23@gmail.com</td>
+            <td>Administrador de bodega</td>
+            <td>23/06/2023</td>
+            <td><img src="img/vistobueno.svg" alt="icono de visto bueno" width="20px"></td>
+            <td><a href="#"><img src="img/iconoeditar.svg" alt="Logo de editar"></td></a>
+        </tr>
+        </table>
+    </div>
+    </section>
+  </div>
+</body>
+</html>

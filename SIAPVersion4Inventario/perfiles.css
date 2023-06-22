@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+  background: rgb(233, 233,233);
+  }
+  .contenedor{
+    display: flex;
+    width: 1200px;
+    margin: auto;
+  }
+  nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+  }
+  .navbar{
+    width: 80%;
+    margin: 0 auto;
+  
+  }
+  .logo{
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center; 
+  }
+  .logo img{
+    width: 80px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  .logo h1{
+    margin-left: 1rem;
+    text-transform: uppercase;
+  }
+  ul{
+    margin: 0 auto;
+  }
+  li{
+    padding-bottom:  2rem;  
+  }
+  li a{
+    font-size: 16px;
+  color: rgb(0, 0, 0);
+  }
+  
+  navi{
+    width: 50px;
+    font-size: 18px;
+    text-align: center;
+  }
+  .logout{
+    position: absolute;
+    bottom: 20px;  
+  }
+  
+  /*Seccion del Main*/
+  
+  .main{
+    width: 100%;
+  
+  }
+  .main-top{
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgb(43, 43, 43);
+  }
+  .main-body{
+    padding: 10px 10px 10px 20px;
+  }
+  h1{
+    margin: 20px 10px;
+  }
+  .boton-usuario{
+    text-align: right;
+    padding: 10px 10px 10px 20px;
+  }
+  .crear-usuario{
+    text-align: right;
+    display: inline-block;
+    background: #8298f8;
+    color: rgb(0, 0, 0);
+    padding: 5px 25px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  .listado-usuarios{
+    background: #ffffff;
+    display: flex;
+    width: 100%;
+    height: 20%;
+  }
+  .tabla-lista{
+    border-collapse: separate;
+    width: 100%;
+  }
+  .tabla-lista th{
+    background: #8298f8;
+  }
+
+  .tabla-lista td{
+    border-collapse: collapse;
+    text-align: center;
+  }
+  .lista2{
+    background: rgb(233, 233, 233);
+  }
+  
+  /*Fin del Main*/
