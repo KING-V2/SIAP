@@ -1,0 +1,398 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+  background: rgb(233, 233,233);
+  }
+  .contenedor{
+    display: flex;
+    width: 100%;
+    margin: auto;
+  }
+  nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+  }
+  .navbar{
+    width: 80%;
+    margin: 0 auto;
+  
+  }
+  .logo{
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center; 
+  }
+  .logo img{
+    width: 80px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  .logo h1{
+    margin-left: 1rem;
+    text-transform: uppercase;
+  }
+  ul{
+    margin: 0 auto;
+  }
+  li{
+    padding-bottom:  2rem;  
+  }
+  li a{
+    font-size: 16px;
+  color: rgb(0, 0, 0);
+  }
+  
+  navi{
+    width: 50px;
+    font-size: 18px;
+    text-align: center;
+  }
+  .logout{
+    position: absolute;
+    bottom: 20px;  
+  }
+  
+  /*Seccion del Main*/
+  
+  .main{
+    width: 100%;
+  
+  }
+  .main-top{
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgb(43, 43, 43);
+  }
+  .main-body{
+    padding: 10px 10px 10px 20px;
+  }
+  h1{
+    margin: 20px 10px;
+  }
+  .boton-usuario{
+    text-align: right;
+    padding: 10px 10px 10px 20px;
+  }
+  .crear-usuario{
+    text-align: right;
+    display: inline-block;
+    background: #8298f8;
+    color: rgb(0, 0, 0);
+    padding: 5px 25px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  .listado-usuarios{
+    background: #ffffff;
+    display: flex;
+    width: 100%;
+    height: 20%;
+  }
+  .tabla-lista{
+    border-collapse: separate;
+    width: 100%;
+  }
+  .tabla-lista th{
+    background: #8298f8;
+  }
+
+  .tabla-lista td{
+    border-collapse: collapse;
+    text-align: center;
+  }
+  .lista2{
+    background: rgb(233, 233, 233);
+  }
+  /*Fin del Main*/
+
+  /*Boton nuevo usuario*/
+.boton-modaln{
+  background: transparent;
+  text-align: right;
+  border-radius: 10px;
+  margin: 10px;
+  }
+.boton-modaln label{
+    padding: 5px 10px;
+    background: #8298f8;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms ease;
+  }
+  .boton-modaln label:hover{
+  background: blueviolet;
+  }
+  /*Boton modaln*/
+  
+  /*Ventana modaln*/
+    #btn-modaln{
+      display: none;
+    }
+    .container-modaln{
+      width: 50%;
+      position: absolute;
+      background: #8298f8;
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+    #btn-modaln:checked ~ .container-modaln{
+      display: flex;
+    }
+    .content-modaln{
+      width: 100%;
+      margin: 5px;
+      padding: 5px;
+      background: rgb(233, 233, 233);
+      border-radius: 5px;
+      
+    }
+    .content-modaln h2{
+      margin-bottom: 10px;
+      background: #ffffff;
+    }
+  .content-modaln .btn-cerrarn{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .content-modaln .btn-cerrarn label{
+    padding: 7px 10px;
+    background-color: #8298f8;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+  }
+  .content-modaln .btn-cerrarn label:hover{
+    background-color: blueviolet;
+  }
+  .form-group input{
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+  }
+/*Ventana modaln*/
+
+
+  /*Boton modal1*/
+.boton-modal1{
+background: transparent
+}
+.boton-modal1 label{
+  padding: 5px 10px;
+  background: #8298f8;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.boton-modal1 label:hover{
+background: blueviolet;
+}
+/*Boton modal1*/
+
+/*Ventana modal1*/
+  #btn-modal1{
+    display: none;
+  }
+  .container-modal1{
+    width: 50%;
+    position: absolute;
+    background: #8298f8;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  #btn-modal1:checked ~ .container-modal1{
+    display: flex;
+  }
+.content-modal1{
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+  background: rgb(233, 233, 233);
+  border-radius: 5px;
+  
+}
+.content-modal1 h2{
+  margin-bottom: 10px;
+  background: #ffffff;
+}
+.content-modal1 .btn-cerrar1{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+.content-modal1 .btn-cerrar1 label{
+  padding: 7px 10px;
+  background-color: #8298f8;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.content-modal1 .btn-cerrar1 label:hover{
+  background-color: blueviolet;
+}
+.form-group input{
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+}
+/*Ventana modal1*/
+
+/*Boton modal2*/
+.boton-modal2{
+  background: transparent
+  }
+  .boton-modal2 label{
+    padding: 5px 10px;
+    background: #8298f8;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms ease;
+  }
+  .boton-modal2 label:hover{
+  background: blueviolet;
+  }
+  /*Boton modal2*/
+  
+  /*Ventana modal2*/
+    #btn-modal2{
+      display: none;
+    }
+    .container-modal2{
+      width: 50%;
+      position: absolute;
+      background: #8298f8;
+      border-color: black;
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+    #btn-modal2:checked ~ .container-modal2{
+      display: flex;
+    }
+  .content-modal2{
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    background: rgb(233, 233, 233);
+    border-radius: 5px;
+    
+  }
+  .content-modal2 h2{
+    margin-bottom: 10px;
+    background: #ffffff;
+  }
+  .content-modal2 .btn-cerrar2{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .content-modal2 .btn-cerrar2 label{
+    padding: 7px 10px;
+    background-color: #8298f8;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+  }
+  .content-modal2 .btn-cerrar2 label:hover{
+    background-color: blueviolet;
+  }
+  .form-group input{
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+  }
+/*Ventana modal2*/
+
+/*Boton modal3*/
+.boton-modal3{
+  background: transparent
+  }
+  .boton-modal3 label{
+    padding: 5px 10px;
+    background: #8298f8;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms ease;
+  }
+  .boton-modal3 label:hover{
+  background: blueviolet;
+  }
+  /*Boton modal3*/
+  
+  /*Ventana modal3*/
+    #btn-modal3{
+      display: none;
+    }
+    .container-modal3{
+      width: 50%;
+      position: absolute;
+      background: #8298f8;
+      border-color: black;
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+    #btn-modal3:checked ~ .container-modal3{
+      display: flex;
+    }
+  .content-modal3{
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    background: rgb(233, 233, 233);
+    border-radius: 5px;
+    
+  }
+  .content-modal3 h2{
+    margin-bottom: 10px;
+    background: #ffffff;
+  }
+  .content-modal3 .btn-cerrar3{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .content-modal3 .btn-cerrar3 label{
+    padding: 7px 10px;
+    background-color: #8298f8;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+  }
+  .content-modal3 .btn-cerrar3 label:hover{
+    background-color: blueviolet;
+  }
+  .form-group input{
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+  }
+/*Ventana modal3*/

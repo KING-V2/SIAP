@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="productos.css">
+  <title>Panel de administración productos</title>
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+  <div class ="contenedor">
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="img/logo.png" alt="Logo de prueba SIAP" ></a>
+          <h1>SIAP</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="perfiles.html">
+              <i class="userimg"><img src="img/user.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Perfiles</span>
+            </a>
+          </li>
+          <li>
+            <a href="productos.html">
+              <i class="productimg"><img src="img/product.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Productos</span>
+            </a>
+          </li>
+          <li>
+            <a href="ayuda.html">
+              <i class="helpimg"><img src="img/help.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Ayuda</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="reportimg"><img src="img/report.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Reportes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="logout">
+              <i class="logoutimg"><img src="img/log out.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Cerrar Sesion</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="main">
+     <div class="main-top">
+      <p>Maneja el inventario a tu gusto</p>
+    </div>
+    <div class="main-body">
+      <h1>Productos</h1>
+    </div>
+    <div class="barrabusqueda">
+      <input type="Buscar" placeholder="Buscar productos con codigo">
+    </div>
+        <!--Agregar producto boton-->
+        <div class="boton-modaln">
+          <label for="btn-modaln"><img src="img/iconoagregar.svg" alt=""></label>
+          </div>
+          <!--Agregar producto boton-->
+          <!---Inicio de editar usuario-->
+          <input type="checkbox" name="ventanamodal" id="btn-modaln">
+          <div class="container-modaln">
+            <div class="content-modaln">
+              <h2>Agregar un nuevo producto</h2>
+              <div class="btn-cerrarn">
+                <label for="btn-modaln">X</label>
+              </div>
+              <main>
+                <link rel="stylesheet" href="fotosproductos/cssfotos/grid.css">
+
+                <div class="container">
+                    <section id="Images" class="images-cards">
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-12" id="add-photo-container">
+                                    <div class="add-new-photo first" id="add-photo">
+                                        <span><i class="icon-camera"></i></span>
+                                    </div>
+                                    <input type="file" multiple id="add-new-photo" name="images[]">
+                                </div>
+                            </div>
+                        </form> 
+                    </section>
+                </div>
+            </main>
+        
+            <!-- Bootstrap y jQuery -->
+            
+            <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            
+            <!--  /Bootstrap y jQuery -->
+              <form id="formularioeditar">
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="id">Nombre del producto</label>
+                    <input type="text" name="form-control" id="nombre">
+                  </div>
+                  <div class="form-group">
+                    <label for="id">Gramos/Kilogramos</label>
+                    <input type="number" name="form-control" id="nombres">
+                  </div>
+                  <div class="form-group">
+                    <label for="id">Cantidad en stock</label>
+                    <input type="number" name="form-control" id="cantidad">
+                  </div>
+                  <div class="form-group">
+                    <label for="id">Precio</label>
+                    <input type="number" name="form-control" id="precio">
+                  </div>
+                  <!--Agregar producto boton-->
+        <div class="boton-modaln">
+          <label for="btn-modaln"><img src="img/iconoagregar.svg" alt=""></label>
+          </div>
+          <!--Agregar producto boton-->
+                </div>
+              </form>
+            </div>
+          </div>
+          <!---Fin de editar usuario-->
+    <div class="tags-bar">
+      <div class="tag">
+        <div class="cartasfiltro">
+          <span>Enlatados</span>
+        </div>
+    </div>
+
+      <div class="tag">
+        <div class="cartasfiltro">
+          <span>Mascotas</span>
+        </div>
+    </div>
+
+    <div class="tag">
+      <div class="cartasfiltro">
+        <span>Aseo</span>
+      </div>
+  </div>
+
+  <div class="tag">
+    <div class="cartasfiltro">
+      <span>Verduras</span>
+    </div>
+</div>
+</div>
+    <div class="job-card">
+      <div class="job-details">
+        <div class="imagen">
+         <i class="arrozdianax500"><img src="img/arrozdianax500.png" alt="Imagen del arrozdianax500"></i>
+        </div>
+        <div class="text">
+          <h2>Arroz Diana <br>X500 Gramos</br></h2>
+          <span>Perfecto para crear deliciosas recetas con familia y amigos.</span>
+        </div>
+      </div>
+      <div class="job-info">
+        <h4>2,600$</h4>
+        <span>Stock: 5</span>
+      </div>  
+       <!---Inicio de editar producto-->
+        <input type="checkbox" name="ventanamodal" id="btn-modaleditar">
+         <div class="container-modaleditar">
+            <div class="content-modaleditar">
+              <h2>Editar infomación del producto</h2>
+                <div class="btn-cerrareditar">
+                 <label for="btn-modaleditar">X</label>
+                </div>
+                 <form id="formularioeditar">
+                 <div class="modal-body">
+                 <div class="form-group">
+                <label for="id">Precio</label>
+               <input type="number" name="form-control" id="precio" placeholder="2.600$">
+               </div>
+                <div class="form-group">
+                <label for="id">Cantidad en stock</label>
+             <input type="number" name="form-control" id="stock" placeholder="5">
+      </div>
+               </div>
+              </div>
+            </form>
+          </div>
+        
+      <!---Fin de editar producto-->
+      <!---Inicio de editar producto-->
+                  <input type="checkbox" name="ventanamodal" id="btn-modaleliminar">
+           <div class="container-modaleliminar">
+            <div class="content-modaleliminar">
+                <h2>Eliminar producto</h2>
+                <p>¿Esta seguro de que desea eliminar este producto del inventario?</p>
+                    <div class="btn-cerrareliminar">
+                        <label for="btn-modaleliminar">Cancelar</label>
+                          </div>
+                          <div class="btn-cerrareliminar">
+                            <label for="btn-modaleliminar"><a href="productos.html">Si, eliminar</label></a>
+                              </div>
+          </div>
+        </div>
+      </form>
+      <!--Boton editar producto-->
+      <div class="job-buttons">
+      <td>
+        <div class="boton-modaleditar">
+       <label for="btn-modaleditar">
+       <img src="img/iconoeditar.svg" alt="logoeditar">
+       </label>
+       </div>
+     </td>
+     <!--Boton editar producto-->
+     <!--Boton eliminar producto-->
+      <td>
+       <div class="boton-modaleliminar">
+      <label for="btn-modaleliminar">
+       <img src="img/iconoeliminar.svg" alt="logoeliminar">
+      </label>
+     </div>
+     </td>
+    </div>
+   <!--Boton eliminar producto-->
+ </div>
+ <div class="job-card">
+  <div class="job-details">
+    <div class="imagen">
+     <i class="lentejasx1000"><img src="img/lenetjasx1000.png" alt="Imagen de lentejasx1000"></i>
+    </div>
+    <div class="text">
+      <h2>Lentejas <br>X1000 Gramos</br></h2>
+      <span>Increible para compartir en familia</span>
+    </div>
+  </div>
+  <div class="job-info">
+    <h4>5,500$</h4>
+    <span>Stock: 2</span>
+  </div>  
+   <!---Inicio de editar producto-->
+    <input type="checkbox" name="ventanamodal" id="btn-modaleditar">
+     <div class="container-modaleditar">
+        <div class="content-modaleditar">
+          <h2>Editar infomación del producto</h2>
+            <div class="btn-cerrareditar">
+             <label for="btn-modaleditar">X</label>
+            </div>
+             <form id="formularioeditar">
+             <div class="modal-body">
+             <div class="form-group">
+            <label for="id">Precio</label>
+           <input type="number" name="form-control" id="precio" placeholder="5,500$$">
+           </div>
+            <div class="form-group">
+            <label for="id">Cantidad en stock</label>
+         <input type="number" name="form-control" id="stock" placeholder="2">
+  </div>
+           </div>
+          </div>
+        </form>
+      </div>
+    
+  <!---Fin de editar producto-->
+  <!---Inicio de editar producto-->
+              <input type="checkbox" name="ventanamodal" id="btn-modaleliminar">
+       <div class="container-modaleliminar">
+        <div class="content-modaleliminar">
+            <h2>Eliminar producto</h2>
+            <p>¿Esta seguro de que desea eliminar este producto del inventario?</p>
+                <div class="btn-cerrareliminar">
+                    <label for="btn-modaleliminar">Cancelar</label>
+                      </div>
+                      <div class="btn-cerrareliminar">
+                        <label for="btn-modaleliminar">Si, eliminar</label></a>
+                          </div>
+      </div>
+    </div>
+  </form>
+  <!--Boton editar producto-->
+  <div class="job-buttons">
+  <td>
+    <div class="boton-modaleditar">
+   <label for="btn-modaleditar">
+   <img src="img/iconoeditar.svg" alt="logoeditar">
+   </label>
+   </div>
+ </td>
+ <!--Boton editar producto-->
+ <!--Boton eliminar producto-->
+  <td>
+   <div class="boton-modaleliminar">
+  <label for="btn-modaleliminar">
+   <img src="img/iconoeliminar.svg" alt="logoeliminar">
+  </label>
+ </div>
+ </td>
+</div>
+<!--Boton eliminar producto-->
+</div>
+    </section>
+  </div> 
+</body>
+</html>
