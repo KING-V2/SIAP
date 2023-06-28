@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ayuda.css">
+    <title>Panel de ayuda</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class ="contenedor">
+        <nav>
+          <div class="navbar">
+            <div class="logo">
+              <a href="index.html"><img src="img/logo.png" alt="Logo de prueba SIAP" ></a>
+              <h1>SIAP</h1>
+            </div>
+            <ul>
+              <li>
+                <a href="perfiles.html">
+                  <i class="userimg"><img src="img/user.svg" alt="Logo usuario"></i>
+                  <span class="nav-item">Perfiles</span>
+                </a>
+              </li>
+              <li>
+                <a href="productos.html">
+                  <i class="productimg"><img src="img/product.svg" alt="Logo usuario"></i>
+                  <span class="nav-item">Productos</span>
+                </a>
+              </li>
+              <li>
+                <a href="ayuda.html">
+                  <i class="helpimg"><img src="img/help.svg" alt="Logo usuario"></i>
+                  <span class="nav-item">Ayuda</span>
+                </a>
+              </li>
+              <li>
+                <a href="reportes.html">
+                  <i class="reportimg"><img src="img/report.svg" alt="Logo usuario"></i>
+                  <span class="nav-item">Reportes</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="logout">
+                  <i class="logoutimg"><img src="img/log out.svg" alt="Logo usuario"></i>
+                  <span class="nav-item">Cerrar Sesion</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    
+        <section class="main">
+         <div class="main-top">
+          <p>Maneja el inventario a tu gusto</p>
+        </div>
+    
+
+   <div class="contenedor-acordeon">
+       <h2>Ayuda</h2>
+       <div class="acordeon">
+           <input type="radio" name="acordeon" id="btn-acordeon1" class="btn-acordeon">
+           <label for="btn-acordeon1">
+               ¿Por qué no tengo los mismos permisos dependiendo de mi usuario?
+           </label>
+           <div class="contenido-acordeon">
+               <p>Dependiendo del usuario designado tendra distintas opciones dentro del aplicativo.</p>
+           </div>
+       </div>
+       <div class="acordeon">
+        <input type="radio" name="acordeon" id="btn-acordeon2" class="btn-acordeon">
+        <label for="btn-acordeon2">
+            ¿Puedo editar la información de un producto sin eliminarlo?
+        </label>
+        <div class="contenido-acordeon">
+            <p>Si, lo podras hacer en la sección de productos haciendo click en el logo de editar para luego proceder a editar la informacion del producto seleccionado.</p>
+        </div>
+    </div>
+    <div class="acordeon">
+        <input type="radio" name="acordeon" id="btn-acordeon3" class="btn-acordeon">
+        <label for="btn-acordeon3">
+            ¿Los reportes tienen fechas de vencimiento?
+        </label>
+        <div class="contenido-acordeon">
+            <p>Se podran descargar reportes sin importar la fecha en la que sean solicitados.</p>
+        </div>
+    </div>
+   </div>
+</section>
+</body>
+</html> 

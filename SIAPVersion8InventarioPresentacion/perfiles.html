@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="perfiles.css">
+  <title>Panel de administración perfiles</title>
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+  <div class ="contenedor">
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="img/logo.png" alt="Logo de prueba SIAP" ></a>
+          <h1>SIAP</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="perfiles.html">
+              <i class="userimg"><img src="img/user.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Perfiles</span>
+            </a>
+          </li>
+          <li>
+            <a href="productos.html">
+              <i class="productimg"><img src="img/product.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Productos</span>
+            </a>
+          </li>
+          <li>
+            <a href="ayuda.html">
+              <i class="helpimg"><img src="img/help.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Ayuda</span>
+            </a>
+          </li>
+          <li>
+            <a href="reportes.html">
+              <i class="reportimg"><img src="img/report.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Reportes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="logout">
+              <i class="logoutimg"><img src="img/log out.svg" alt="Logo usuario"></i>
+              <span class="nav-item">Cerrar Sesion</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="main">
+     <div class="main-top">
+      <p>Maneja el inventario a tu gusto</p>
+    </div>
+    <div class="main-body">
+      <h1>Lista de usuarios</h1>
+    </div>
+    <!--Agregar usuario boton-->
+    <div class="boton-modaln">
+      <label for="btn-modaln"><img src="img/iconoagregar.svg" alt=""></label>
+      </div>
+      <!--Agregar usuario boton-->
+      <!---Inicio de editar usuario-->
+      <input type="checkbox" name="ventanamodal" id="btn-modaln">
+      <div class="container-modaln">
+        <div class="content-modaln">
+          <h2>Agregar un nuevo usuario</h2>
+          <div class="btn-cerrarn">
+            <label for="btn-modaln">X</label>
+          </div>
+          <form id="formularioeditar">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="id">ID</label>
+                <input type="number" name="form-control" id="id">
+              </div>
+              <div class="form-group">
+                <label for="id">Nombres</label>
+                <input type="text" name="form-control" id="nombres">
+              </div>
+              <div class="form-group">
+                <label for="id">Apellidos</label>
+                <input type="text" name="form-control" id="apellidos">
+              </div>
+              <div class="form-group">
+                <label for="id">Correo Electronico</label>
+                <input type="email" name="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label for="id">Rol</label>
+                <input type="text" name="form-control" id="rol">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!---Fin de editar usuario-->
+    <div class="listado-usuarios">
+        <table class="tabla-lista">
+            <tr>
+                <th>ID</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Email</th>
+                <th>Rol</th>
+                <th>Ultima sesion</th>
+                <th>Activo</th>
+                <th>Opciones</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Harold Esteban</td>
+                <td>Gaona Rojas</td>
+                <td>rojasharold882@gmail.com</td>
+                <td>Administrador</td>
+                <td>20/06/2023</td>
+                <td><img src="img/vistobueno.svg" alt="icono de visto bueno" width="20px"></td>
+                <!---Boton editar usuario-->
+             <td>
+              <div class="boton-modal1">
+              <label for="btn-modal1">
+              <img src="img/iconoeditar.svg" alt="logoeditar">
+              </label>
+              </div>
+             </td>
+              <!---Boton editar usuario-->
+              <!---Inicio de editar usuario-->
+              <input type="checkbox" name="ventanamodal" id="btn-modal1">
+              <div class="container-modal1">
+                <div class="content-modal1">
+                  <h2>Editar infomación de usuario</h2>
+                  <div class="btn-cerrar1">
+                    <label for="btn-modal1">X</label>
+                  </div>
+                  <form id="formularioeditar">
+                    <div class="modal-body">
+                      <div class="form-group">
+                        <label for="id">Nombres</label>
+                        <input type="text" name="form-control" id="nombres" placeholder="Harold Esteban">
+                      </div>
+                      <div class="form-group">
+                        <label for="id">Apellidos</label>
+                        <input type="text" name="form-control" id="apellidos" placeholder="Gaona Rojas">
+                      </div>
+                      <div class="form-group">
+                        <label for="id">Correo Electronico</label>
+                        <input type="email" name="form-control" id="email" placeholder="rojasharold882@gmail.com">
+                      </div>
+                      <div class="form-group">
+                        <label for="id">Rol</label>
+                        <input type="text" name="form-control" id="rol" placeholder="Administrador">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!---Fin de editar usuario-->
+
+            </tr>
+            <tr class="lista2">
+              <td>2</td>
+              <td>Cristian Daniel</td>
+              <td>Arrieta Vargas</td>
+              <td>danielarrieta0813@gmail.com</td>
+              <td>Vendedor</td>
+              <td>5/05/2023</td>
+              <td><img src="img/iconoinactivo.svg" alt="icono de visto bueno" width="20px"></td>
+              <!---Boton editar usuario-->
+             <td>
+              <div class="boton-modal2">
+              <label for="btn-modal2">
+              <img src="img/iconoeditar.svg" alt="logoeditar">
+              </label>
+              </div>
+             </td>
+              <!---Boton editar usuario-->
+              <!---Inicio de editar usuario-->
+              <input type="checkbox" name="ventanamodal" id="btn-modal2">
+              <div class="container-modal2">
+                <div class="content-modal2">
+                  <h2>Editar infomación de usuario</h2>
+                  <div class="btn-cerrar2">
+                    <label for="btn-modal2">X</label>
+                  </div>
+                  <form id="formularioeditar">
+                    <div class="modal-body">
+                      <div class="form-group">
+                        <label for="id">Nombres</label>
+                        <input type="text" name="form-control" id="nombres" placeholder="Cristian Daniel">
+                      </div>
+                      <div class="form-group">
+                        <label for="id">Apellidos</label>
+                        <input type="text" name="form-control" id="apellidos" placeholder="Arrieta Vargas">
+                      </div>
+                      <div class="form-group">
+                        <label for="id">Correo Electronico</label>
+                        <input type="email" name="form-control" id="email" placeholder="danielarrieta0813@gmail.com">
+                      </div>
+                      <div class="form-group">
+                        <label for="id">Rol</label>
+                        <input type="text" name="form-control" id="rol" placeholder="Vendedor">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!---Fin de editar usuario-->
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Laura Julieth</td>
+            <td>Suarez Lopez</td>
+            <td>suarezlaura23@gmail.com</td>
+            <td>Administrador de bodega</td>
+            <td>23/06/2023</td>
+            <td><img src="img/vistobueno.svg" alt="icono de visto bueno" width="20px"></td>
+                          <!---Boton editar usuario-->
+                          <td>
+                            <div class="boton-modal3">
+                            <label for="btn-modal3">
+                            <img src="img/iconoeditar.svg" alt="logoeditar">
+                            </label>
+                            </div>
+                           </td>
+                            <!---Boton editar usuario-->
+                            <!---Inicio de editar usuario-->
+                  <input type="checkbox" name="ventanamodal" id="btn-modal3">
+                   <div class="container-modal3">
+                     <div class="content-modal3">
+                       <h2>Editar infomación de usuario</h2>
+                          <div class="btn-cerrar3">
+                            <label for="btn-modal3">X</label>
+                              </div>
+                               <form id="formularioeditar">
+                                 <div class="modal-body">
+                                  <div class="form-group">
+                                     <label for="id">Nombres</label>
+                                    <input type="text" name="form-control" id="nombres" placeholder="Laura Julieth">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="id">Apellidos</label>
+                                      <input type="text" name="form-control" id="apellidos" placeholder="Suarez Lopez">
+                                    </div>
+                                    <div class="form-group">
+                                   <label for="id">Correo Electronico</label>
+                                 <input type="email" name="form-control" id="email" placeholder="suarezlaura23@gmail.com">
+                              </div>
+                             <div class="form-group">
+                           <label for="id">Rol</label>
+                           <input type="text" name="form-control" id="rol" placeholder="Administrador de bodega">
+                         </div>
+                         </div>
+                        </form>
+                   </div>
+                  </div>
+               <!---Fin de editar usuario-->
+        </tr>
+        </table>
+    </div>
+    </section>
+  </div>
+</body>
+</html>

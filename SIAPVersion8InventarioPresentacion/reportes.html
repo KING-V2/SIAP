@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reportes.css">
+    <title>Panel de ayuda</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class ="contenedor">
+        <nav>
+          <div class="navbar">
+            <div class="logo">
+              <a href="index.html"><img src="img/logo.png" alt="Logo de prueba SIAP" ></a>
+              <h1>SIAP</h1>
+            </div>
+            <ul>
+              <li>
+                <a href="perfiles.html">
+                  <i class="userimg"><img src="img/user.svg" alt="Logo usuario"></i>
+                  <span class="nav-item">Perfiles</span>
+                </a>
+              </li>
+              <li>
+                <a href="productos.html">
+                  <i class="productimg"><img src="img/product.svg" alt="Logo usuario"></i>
+                  <span class="nav-item">Productos</span>
+                </a>
+              </li>
+              <li>
+                <a href="ayuda.html">
+                  <i class="helpimg"><img src="img/help.svg" alt="Logo usuario"></i>
+                  <span class="nav-item">Ayuda</span>
+                </a>
+              </li>
+              <li>
+                <a href="reportes.html">
+                  <i class="reportimg"><img src="img/report.svg" alt="Logo usuario"></i>
+                  <span class="nav-item">Reportes</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="logout">
+                  <i class="logoutimg"><img src="img/log out.svg" alt="Logo usuario"></i>
+                  <span class="nav-item">Cerrar Sesion</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+    
+        <section class="main">
+         <div class="main-top">
+          <p>Maneja el inventario a tu gusto</p>
+        </div>
+        <section class="plan_container">
+          <h1 class="subtitle">Gestión de reportes</h1>
+  
+          <div class="plan__table">
+              <div class="plan__element plan__element--best">
+                  <h3 class="plan__plan">Exportar</h3>
+  
+                  <div class="plan__items">
+                      <input type="date" id="texto-archivo" placeholder="Asignar fecha"/>
+                      <button id="exportar" class="plan__cta">Exportar</button>
+                  </div>
+              </div>             
+          </div>
+      </section>
+    
+
+   <script>  
+    /**
+    * Exportar
+    **/
+    function exportar (data, fileName) {
+      const a = document.createElement("a");
+      const contenido = data,
+          blob = new Blob([contenido], {type: "octet/stream"}),
+          url = window.URL.createObjectURL(blob);
+      a.href = url;
+      a.download = fileName;
+      a.click();
+      window.URL.revokeObjectURL(url);
+      
+    };
+
+    document.querySelector('#exportar').onclick = function () {
+      const data = document.querySelector('#texto-archivo').value;
+      const nombreArchivo = 'ejemplo.txt'
+      exportar(data, nombreArchivo);
+    }
+    </script>
+</section>
+</body>
+</html>
