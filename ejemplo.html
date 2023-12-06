@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla con productos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      width: 60%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      z-index: 1; /* para que la tabla esté sobre el contenedor */
+      position: relative; 
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .btn-eye {
+      background-color: #4c9baf;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    #product-container {
+      display: none;
+      text-align: center;
+      padding: 10px;
+      border: 5px solid #a19d9d;
+      background-color: rgb(240, 237, 237); /* Fondo contenedor */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: absolute; /* Posicion contenedor */
+      right: 20px; /* distancia desde el lado derecho */
+      top: 50px; /* distancia desde la parte superior */
+      z-index: 2; /* Asegura que el contenedor esté sobre la tabla */
+    }
+
+    #product-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #product-image-container {
+      margin-right: 20px; /* Espacio en la parte izquierda para la imagen */
+    }
+
+    #product-image {
+      max-width: 100%;
+      max-height: 100px; 
+      border: 2px solid #a19d9d; /* Borde para el recuadro */
+      border-radius: 8px; 
+      overflow: hidden; /* Para recortar la imagen que sobresale del borde */
+    }
+
+    #product-details {
+      text-align: left; /* Alineación del texto a la izquierda */
+    }
+
+   
+    #show-info-btn:focus {
+      outline: none;
+    }
+
+    #close-btn { /* boton de cerrar */
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 8px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Tabla de Productos</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre del Producto</th>
+        <th>Precio</th>
+        <th>Cantidad Existente</th>
+        <th>Fecha de Vencimiento</th>
+        <th>Categoría</th>
+        <th>Proveedor</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <!-- Contenedor  -->
+  <div id="product-container">
+    <button id="close-btn" onclick="cerrarContenedor()">Cerrar</button>
+    <div id="product-info">
+      <div id="product-image-container">
+        <img id="product-image" src="" alt="Informacion actual del producto.">
+      </div>
+      <div id="product-details">
+        <h2 id="product-id">ID del Producto: </h2>
+        <h2 id="product-name">Nombre del Producto</h2>
+        <p id="product-price">Precio: $</p>
+        <p id="product-quantity">Cantidad Existente: </p>
+        <p id="product-expiration">Fecha de Vencimiento: </p>
+        <p id="product-category">ID de Categoría: </p>
+        <p id="product-provider">ID del Proveedor: </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Datos de ejemplo
+    const datosProductos = [
+      { nomProducto: 'Yogurt Alpina', precioProducto: '4000', cantidadExistente: '20', fechaVencimiento: '2023-01-01', categoria_idCategorias: '4', Proveedor_idProveedor: '1', imageSrc: 'https://jumbocolombiaio.vtexassets.com/arquivos/ids/192472/7702001047406-yogurt-original-melocoton-bolsa-900g.jpg?v=637814020061200000' },
+      { nomProducto: 'Leche Alpina', precioProducto: '4900', cantidadExistente: '30', fechaVencimiento: '2017-05-12', categoria_idCategorias: '4', Proveedor_idProveedor: '1', imageSrc: 'https://elviejoparisvirtual.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTQwOTcyLCJwdXIiOiJibG9iX2lkIn19--cc4db015b48ac26f86a1d3ecf1a581b3907de97f/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZml0IjpbODAwLDgwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--1420d7fd3d20057726f0ef3c0043db24ca0403be/leche-alpina-entera-89896b67-9528-42c7-af25-22b5e116790c.jpg?locale=es' },
+     
+    ];
+
+    function generarFilasTabla() {
+      const tbody = document.querySelector('tbody');
+
+      datosProductos.forEach((producto, index) => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+          <td>${producto.nomProducto}</td>
+          <td>${producto.precioProducto}</td>
+          <td>${producto.cantidadExistente}</td>
+          <td>${producto.fechaVencimiento}</td>
+          <td>${producto.categoria_idCategorias}</td>
+          <td>${producto.Proveedor_idProveedor}</td>
+          <td><button class="btn-eye" onclick="mostrarInformacion(${index})">👁️ Detalle</button></td>
+          <td style="display: none;"><img class="product-thumbnail" src="${producto.imageSrc}" alt="Thumbnail"></td>
+        `;
+
+        tbody.appendChild(fila);
+      });
+    }
+
+    window.onload = function() {
+      generarFilasTabla();
+    };
+
+    function mostrarInformacion(index) {
+      const productoSeleccionado = datosProductos[index];
+
+      // Precio para que acepte decimales
+      const formattedPrice = productoSeleccionado.precioProducto.toLocaleString('es-ES', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
+
+      // Actualizar contenido del contenedor con los datos del producto seleccionado
+      document.getElementById('product-id').textContent = `ID del Producto: ${index + 1}`;
+      document.getElementById('product-name').textContent = `Nombre del Producto: ${productoSeleccionado.nomProducto}`;
+      document.getElementById('product-price').textContent = `Precio: $${formattedPrice}`;
+      document.getElementById('product-quantity').textContent = `Cantidad Existente: ${productoSeleccionado.cantidadExistente}`;
+      document.getElementById('product-expiration').textContent = `Fecha de Vencimiento: ${productoSeleccionado.fechaVencimiento}`;
+      document.getElementById('product-category').textContent = `ID de Categoría: ${productoSeleccionado.categoria_idCategorias}`;
+      document.getElementById('product-provider').textContent = `ID del Proveedor: ${productoSeleccionado.Proveedor_idProveedor}`;
+      document.getElementById('product-image').src = productoSeleccionado.imageSrc;
+
+     
+      document.getElementById('product-container').style.display = 'block';
+    }
+
+    function cerrarContenedor() {
+      document.getElementById('product-container').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
