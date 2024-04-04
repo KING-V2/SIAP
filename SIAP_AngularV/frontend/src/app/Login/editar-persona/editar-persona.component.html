@@ -1,0 +1,84 @@
+<div class="row" style="margin-top: 60px;">
+    <div class="col-sm-12">
+      <form (ngSubmit)="onSubmit()" #personaForm="ngForm">
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="nombre">Primer Nombre</label>
+            <input type="text" class="form-control" required [(ngModel)]="persona.Nombre1" name="Nombre1">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="nombre">Segundo Nombre</label>
+              <input type="text" class="form-control" required [(ngModel)]="persona.Nombre2" name="Nombre2">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="nombre">Primer Apellido</label>
+              <input type="text" class="form-control" required [(ngModel)]="persona.Apellido1" name="Apellido1">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="nombre">Segundo Apellido</label>
+              <input type="text" class="form-control" required [(ngModel)]="persona.Apellido2" name="Apellido2">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="nombre">Fecha de nacimiento</label>
+              <input type="date" class="form-control" required [(ngModel)]="persona.fechaNacimiento" name="fechaNacimiento">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="nombre">Telefono</label>
+              <input type="number" class="form-control" required [(ngModel)]="persona.Telefono" name="Telefono">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="nombre">Correo Electronico</label>
+              <input type="email" class="form-control" required [(ngModel)]="persona.CorreoElectronico" name="CorreoElectronico">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="nombre">Contraseña</label>
+              <input type="password" class="form-control" required [(ngModel)]="persona.Contrasena" name="Contrasena">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="nombre">Direccion de residencia</label>
+              <input type="text" class="form-control" required [(ngModel)]="persona.DireccionResidencia" name="DireccionResidencia">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="nombre">Numero documento de identidad</label>
+              <input type="number" class="form-control" required [(ngModel)]="persona.NumeroDocumentoIdentidad" name="NumeroDocumentoIdentidad">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="nombre">Tipo de documento</label>
+              <input type="number" class="form-control" required [(ngModel)]="persona.tipoDocumento_idtipoDocumento" name="tipoDocumento_idtipoDocumento">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="nombre">Rol</label>
+              <input type="number" class="form-control" required [(ngModel)]="persona.Rol_idRol" name="Rol_idRol">
+            </div>
+          </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success" style="margin: 20px; margin-left: 200px; width: 200px;" [disabled]="!personaForm">Guardar cambios</button>
+        </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  

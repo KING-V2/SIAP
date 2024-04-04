@@ -1,0 +1,32 @@
+Comandos para instalar en el frontend y backend:
+
+
+npm install
+
+npm install express mysql2 body-parser pm2 jsonwebtoken sweetalert2  
+
+
+correr backend con dos terminales una con esto:
+
+pm2 start categoria.js
+pm2 start contrato.js
+pm2 start devolucion.js
+pm2 start devoluciondetallada.js
+pm2 start facturacompra.js
+pm2 start facturadetalle.js
+pm2 start gestionproducto.js
+pm2 start ordendesalida.js
+pm2 start ordendesalidadetallada.js
+pm2 start proveedor.js
+pm2 start rol.js
+pm2 start subcategoria.js
+pm2 start tienda.js
+pm2 start tipocontrato.js
+pm2 start tipodocumento.js
+pm2 start producto.js
+
+Y la otra terminal con este comando:
+npm run serve
+
+frontend: 
+ng serve -o

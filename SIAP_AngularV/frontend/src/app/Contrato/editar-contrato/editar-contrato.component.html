@@ -1,0 +1,42 @@
+<div class="row" style="margin-top: 60px;">
+    <div class="col-sm-12">
+      <form (ngSubmit)="onSubmit()" #contratoForm="ngForm">
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="email">Salario</label>
+            <input type="number" class="form-control" required [(ngModel)]="contrato.Salario" name="Salario">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="email">FechaInicioContrato</label>
+              <input type="date" class="form-control" required [(ngModel)]="contrato.FechaInicioContrato" name="FechaInicioContrato">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="email">FechaFinalContrato</label>
+              <input type="date" class="form-control" required [(ngModel)]="contrato.FechaFinalContrato" name="FechaFinalContrato">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="email">tipoContrato_idtipoContrato</label>
+              <input type="number" class="form-control" required [(ngModel)]="contrato.tipoContrato_idtipoContrato" name="tipoContrato_idtipoContrato">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="email">Persona_idPersona</label>
+              <input type="number" class="form-control" required [(ngModel)]="contrato.Persona_idPersona" name="Persona_idPersona">
+            </div>
+          </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success" style="margin: 20px; margin-left: 200px; width: 200px;" [disabled]="!contratoForm.form.valid">Guardar cambios</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  
