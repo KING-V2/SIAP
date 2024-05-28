@@ -1,0 +1,68 @@
+<div class="container" style="margin-top: 60px;">
+  <div class="row">
+      <div class="col-sm-12">
+          <form class="form-inline">
+              <fieldset class="form-group col-sm-11"></fieldset>
+              <fieldset class="form-group col-sm-1">
+                  <a class="btn btn-primary" style="width: 100px " [routerLink]="['/personaAG']">
+                      <img src="../../assets/folder-plus.svg" alt="imagen de agregar">
+                  </a>
+              </fieldset>
+          </form>
+          <br>
+          <div class="table-responsive">
+              <table class="table table-striped">
+                  <thead>
+                      <tr>
+                          <th> ID Persona </th>
+                          <th> Primer Nombre </th>
+                          <th> Segundo Nombre </th>
+                          <th> Primer Apellido </th>
+                          <th> Segundo Apellido </th>
+                          <th> Fecha de nacimiento </th>
+                          <th> Telefono </th>
+                          <th> Correo Electronico </th>
+                          <th> Contraseña </th>
+                          <th> Direccion de residencia </th>
+                          <th> Documento de identidad </th>
+                          <th> Tipo de documento </th>
+                          <th> Rol </th>
+                          <th> Ajustes </th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let persona of personas | async">
+                          <td>{{ persona.idPersona }}</td>
+                          <td>{{ persona.Nombre1 }}</td>
+                          <td>{{ persona.Nombre2 }}</td>
+                          <td>{{ persona.Apellido1 }}</td>
+                          <td>{{ persona.Apellido2 }}</td>
+                          <td>{{ persona.fechaNacimiento }}</td>
+                          <td>{{ persona.Telefono }}</td>
+                          <td>{{ persona.CorreoElectronico }}</td>
+                          <td>{{ persona.Contrasena }}</td>
+                          <td>{{ persona.DireccionResidencia }}</td>
+                          <td>{{ persona.NumeroDocumentoIdentidad }}</td>
+                          <td>{{ persona.tipoDocumento_idtipoDocumento }}</td>
+                          <td>{{ persona.Rol_idRol }}</td>
+                          <td>
+                              <fieldset class="form-group">
+                                  <a class="btn btn-warning bi bi-pencil-square" [routerLink]="['/personaAc', persona.idPersona]">
+                                      <img src="../../assets/pencil-square.svg" alt="imagen de editar">
+                                  </a>
+                              </fieldset>
+                          </td>
+                          <td>
+                              <fieldset class="form-group">
+                                  <button class="btn btn-danger" (click)="borrarPersona(persona.idPersona)">
+                                      <img src="../../assets/trash.svg" alt="imagen de eliminar">
+                                  </button>
+                              </fieldset>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>

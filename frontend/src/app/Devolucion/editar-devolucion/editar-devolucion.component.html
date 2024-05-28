@@ -1,0 +1,24 @@
+<div class="row" style="margin-top: 60px;">
+    <div class="col-sm-12">
+      <form (ngSubmit)="onSubmit()" #devolucionForm="ngForm">
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="email">Descripcion Motivo Devolucion</label>
+            <input type="text" class="form-control" required [(ngModel)]="devolucion.DescripcionMotivoDevolucion" name="DescripcionMotivoDevolucion">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="email">Fecha Devolucion</label>
+              <input type="date" class="form-control" required [(ngModel)]="devolucion.FechaDevolucion" name="FechaDevolucion">
+            </div>
+          </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success" style="margin: 20px; margin-left: 200px; width: 200px;" [disabled]="!devolucionForm.form.valid">Guardar cambios</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  
