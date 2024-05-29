@@ -17,7 +17,7 @@ const PUERTO = 4014;
 
 const conexion = mysql.createConnection({
     host: 'dbsiap.mysql.database.azure.com',
-    database: 'dbsiap',
+    database: 'siap',
     user: 'siapadmin',
     password: 'pollitos123456.', // Reemplaza con tu contraseña
     port: 3306, // El puerto por defecto de MySQL
