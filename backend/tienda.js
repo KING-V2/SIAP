@@ -1,7 +1,6 @@
 const express = require("express");
 const mysql = require("mysql2");
 const bodyParser = require("body-parser");
-const { error } = require("console");
 
 const app = express();
 
@@ -13,17 +12,28 @@ app.use(function (_req, res, next) {
 });
 
 app.use(bodyParser.json());
+
 const PUERTO = 4014;
 
 const conexion = mysql.createConnection({
-    host: 'localhost',
-    database: 'siap',
-    user: 'root',
-    password: ''
+    host: 'dbsiap.mysql.database.azure.com',
+    database: 'dbsiap',
+    user: 'siapadmin',
+    password: 'pollitos123456.', // Reemplaza con tu contraseña
+    port: 3306, // El puerto por defecto de MySQL
+});
+
+// Intenta conectarse a la base de datos
+conexion.connect(error => {
+    if (error) {
+        console.error('Error al conectar a la base de datos:', error);
+    } else {
+        console.log('Conectado a la base de datos de Azure');
+    }
 });
 
 app.listen(PUERTO, () => {
-    console.log('Puerto:', PUERTO);
+    console.log('Servidor escuchando en el puerto:', PUERTO);
 });
 
 conexion.connect(error =>{

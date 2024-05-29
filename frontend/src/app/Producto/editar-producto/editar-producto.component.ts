@@ -24,7 +24,7 @@ export class EditarProductoComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     if (this.id) {
       console.log("EDITAR");
-      this.productoService.obtenerProductoPorId(this.id).subscribe(
+      this.productoService.obtenerProductos(this.id).subscribe(
         data => {
           if (data && data.length > 0) {
             this.producto = data[0];

@@ -13,7 +13,7 @@ app.use(function (_req, res, next) {
 });
 
 app.use(bodyParser.json());
-const PUERTO = siapbd.mysql.database.azure.com;
+const PUERTO = 4000;
 
 const conexion = mysql.createConnection({
     host: 'localhost',

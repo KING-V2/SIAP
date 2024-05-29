@@ -77,6 +77,7 @@ import { BienvenidoComponent } from './bienvenido/bienvenido.component';
 import { JwtHelperService, JWT_OPTIONS }  from '@auth0/angular-jwt'
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { LoginComponent } from './Login/login.component';
+import { FiltroProductosPipe } from './Producto/lista-producto/filtro-productos.pipe';
 
 
 
@@ -134,7 +135,8 @@ import { LoginComponent } from './Login/login.component';
     ListaDevolucionDetalladaComponent,
     EditarDevolucionDetalladaComponent,
     BienvenidoComponent,
-    LoginComponent
+    LoginComponent,
+    FiltroProductosPipe
 
   ],
   imports: [

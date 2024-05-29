@@ -20,12 +20,13 @@ export class ProductoService {
       );
   }
 
-  obtenerProductoPorId(id: string): Observable<ProductoModel[]> {
-    return this.http.get<ProductoModel[]>(`${this.BASE_URL}/productoID/${id}`)
+  obtenerProductos(terminoBusqueda: string): Observable<ProductoModel[]> {
+    return this.http.get<ProductoModel[]>(`${this.BASE_URL}/producto?termino=${terminoBusqueda}`)
       .pipe(
         catchError(this.handleError)
       );
   }
+  
 
   agregarProducto(producto: ProductoModel): Observable<any> {
     return this.http.post<any>(`${this.BASE_URL}/productoAG`, producto)

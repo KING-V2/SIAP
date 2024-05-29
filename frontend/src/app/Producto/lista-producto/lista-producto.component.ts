@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 export class ListaProductoComponent implements OnInit {
 
   productos: Observable<ProductoModel[]> | undefined;
+  terminoBusqueda: string = ''
 
   constructor(private productoService: ProductoService) { }
 
@@ -30,6 +31,19 @@ export class ListaProductoComponent implements OnInit {
       }
     );
   }
+
+  obtenerProductos() {
+    this.productoService.obtenerProductos(this.terminoBusqueda).subscribe(
+      data => {
+        console.log("Datos de productos obtenidos:", data);
+        this.productos = of(data);
+      },
+      error => {
+        console.error("Error al obtener productos:", error);
+      }
+    );
+  }
+  
   
   borrarProducto(id: string) {
     console.log("ID del producto a eliminar:", id);
