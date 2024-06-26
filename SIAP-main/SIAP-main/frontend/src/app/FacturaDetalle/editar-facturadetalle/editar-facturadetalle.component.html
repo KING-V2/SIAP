@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    
+    .container {
+      width: 80%;
+      max-width: 600px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+  
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row" style="margin-top: 60px;">
+      <div class="col-sm-12">
+        <!-- Formulario principal -->
+        <form (ngSubmit)="onSubmit()" #facturadetalleForm="ngForm">
+          
+          <!-- Iteración sobre los detalles de factura -->
+          <div *ngFor="let detalle of facturadetalles; let i = index" class="detalle-factura">
+            <fieldset class="form-group">
+              <div class="col-sm-12">
+                <label class="control-label" for="FacturaCompra_idFacturaCompra">ID Factura Compra</label>
+                <input type="number" class="form-control" required [(ngModel)]="detalle.FacturaCompra_idFacturaCompra" name="FacturaCompra_idFacturaCompra_{{i}}">
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="col-sm-12">
+                <label class="control-label" for="Producto_idProducto">ID Producto</label>
+                <input type="number" class="form-control" required [(ngModel)]="detalle.Producto_idProducto" name="Producto_idProducto_{{i}}">
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="col-sm-12">
+                <label class="control-label" for="CantidadProductos">Cantidad Productos</label>
+                <input type="number" class="form-control" required [(ngModel)]="detalle.CantidadProductos" name="CantidadProductos_{{i}}">
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="col-sm-12">
+                <label class="control-label" for="PrecioCompra">Precio Compra</label>
+                <input type="number" class="form-control" required [(ngModel)]="detalle.PrecioCompra" name="PrecioCompra_{{i}}">
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="col-sm-12">
+                <label class="control-label" for="nomProducto">Nombre Producto</label>
+                <input type="text" class="form-control" required [(ngModel)]="detalle.nomProducto" name="nomProducto_{{i}}">
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="col-sm-12">
+                <label class="control-label" for="descripcionProducto">Descripción Producto</label>
+                <input type="text" class="form-control" required [(ngModel)]="detalle.descripcionProducto" name="descripcionProducto_{{i}}">
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="col-sm-12">
+                <label class="control-label" for="fechaVencimiento">Fecha de Vencimiento</label>
+                <input type="date" class="form-control" required [(ngModel)]="detalle.fechaVencimiento" name="fechaVencimiento_{{i}}">
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="col-sm-12">
+                <label class="control-label" for="categoria_idCategorias">ID Categoría</label>
+                <input type="number" class="form-control" required [(ngModel)]="detalle.categoria_idCategorias" name="categoria_idCategorias_{{i}}">
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="categoria_idCategorias">Rol</label>
+              <input type="number" class="form-control" required [(ngModel)]="detalle.Persona_idPersona" name="categoria_idCategorias_{{i}}">
+            </div>
+            
+          </fieldset>
+          <button type="button" (click)="eliminarDetalle(i)">Eliminar</button>
+            <hr> <!-- Separador entre cada detalle de factura -->
+          </div>
+  
+          <!-- Botones para agregar y eliminar detalles de factura -->
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="button" class="btn btn-primary" style="margin-bottom: 10px;" (click)="agregarDetalle()">Agregar Detalle</button>
+          </div>
+          
+        
+          <!-- Botón para guardar cambios -->
+          <fieldset class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-success" style="margin: 20px; margin-left: 200px; width: 200px;" [disabled]="!facturadetalleForm.form.valid">Guardar cambios</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
+
+
+
+  
